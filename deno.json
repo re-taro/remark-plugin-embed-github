@@ -1,0 +1,45 @@
+{
+	"name": "@re-taro/remark-plugin-embed-github",
+	"exports": "./mod.ts",
+	"version": "1.0.0",
+	"tasks": {
+		"dev": "deno run --watch main.ts"
+	},
+	"fmt": {
+		"lineWidth": 80,
+		"semiColons": true,
+		"singleQuote": false,
+		"proseWrap": "always",
+		"exclude": [
+			".release-please-manifest.json",
+			"CHANGELOG.md",
+			"LICENSE"
+		]
+	},
+	"lint": {
+		"include": [
+			"src/"
+		],
+		"rules": {
+			"tags": [
+				"recommended"
+			],
+			"include": [
+				"camelcase",
+				"default-param-last",
+				"eqeqeq",
+				"explicit-function-return-type",
+				"guard-for-in",
+				"no-const-assign",
+				"no-eval",
+				"no-external-import",
+				"no-self-compare",
+				"no-throw-literal",
+				"no-top-level-await",
+				"no-undef",
+				"prefer-ascii",
+				"verbatim-module-syntax"
+			]
+		}
+	}
+}
