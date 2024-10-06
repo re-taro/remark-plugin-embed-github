@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.2.0
+      - name: Setup | Deno
+        uses: denoland/setup-deno@v1.5.1
+        with:
+          deno-version: v1.x
+      - name: Test | Lint
+        run: deno lint .
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.2.0
+      - name: Setup | Deno
+        uses: denoland/setup-deno@v1.5.1
+        with:
+          deno-version: v1.x
+      - name: Test | Format
+        run: deno fmt --check
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.2.0
+      - name: Setup | Deno
+        uses: denoland/setup-deno@v1.5.1
+        with:
+          deno-version: v1.x
+      - name: Test | Publish
+        run: deno publish --dry-run
