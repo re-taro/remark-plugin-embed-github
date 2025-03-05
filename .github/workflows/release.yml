@@ -30,7 +30,7 @@ jobs:
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
-      - uses: googleapis/release-please-action@v4.1.4
+      - uses: googleapis/release-please-action@v4.1.5
         id: release_please
         with:
           token: ${{ steps.bot.outputs.token }}
