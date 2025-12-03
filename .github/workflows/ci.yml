@@ -14,7 +14,7 @@ jobs:
       - name: Setup | Deno
         uses: denoland/setup-deno@v1.5.2
         with:
-          deno-version: v1.x
+          deno-version: 2.x
       - name: Test | Lint
         run: deno lint .
   format:
@@ -25,7 +25,7 @@ jobs:
       - name: Setup | Deno
         uses: denoland/setup-deno@v1.5.2
         with:
-          deno-version: v1.x
+          deno-version: 2.x
       - name: Test | Format
         run: deno fmt --check
   publish:
@@ -36,6 +36,6 @@ jobs:
       - name: Setup | Deno
         uses: denoland/setup-deno@v1.5.2
         with:
-          deno-version: v1.x
+          deno-version: 2.x
       - name: Test | Publish
         run: deno publish --dry-run
