@@ -12,7 +12,7 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v4.3.1
       - name: Setup | Deno
-        uses: denoland/setup-deno@v1.5.2
+        uses: denoland/setup-deno@v2.0.3
         with:
           deno-version: v1.x
       - name: Test | Lint
@@ -23,7 +23,7 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v4.3.1
       - name: Setup | Deno
-        uses: denoland/setup-deno@v1.5.2
+        uses: denoland/setup-deno@v2.0.3
         with:
           deno-version: v1.x
       - name: Test | Format
@@ -34,7 +34,7 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v4.3.1
       - name: Setup | Deno
-        uses: denoland/setup-deno@v1.5.2
+        uses: denoland/setup-deno@v2.0.3
         with:
           deno-version: v1.x
       - name: Test | Publish
